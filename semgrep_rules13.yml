@@ -1,7 +1,8 @@
 rules:
-- id: eval-detection
-patterns: 
-- pattern-regex: '\beval[\s]*’
-languages: [generic]
-message: «Eval detected»
-severity: ERROR
+  - id: untitled_rule
+    patterns:
+    - pattern-regex: '\beval[\s]*'
+    message: eval detected
+    languages: 
+     - generic
+    severity: WARNING
