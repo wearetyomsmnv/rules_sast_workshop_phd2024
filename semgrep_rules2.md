@@ -1,0 +1,6 @@
+rules:
+id: eval-use
+pattern: eval(…);
+languages: [php]
+message: ”Eval detected”
+severity: ERROR

@@ -1,0 +1,6 @@
+rules:
+id: eval-detection
+pattern: eval(…)
+languages: [python]
+message: ”Eval detected”
+severity: ERROR

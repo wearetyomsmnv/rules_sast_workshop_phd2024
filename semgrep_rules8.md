@@ -1,0 +1,7 @@
+rules:
+id: detected-etc-shadow
+	languages: regex
+	- pattern-regex: ^[a-zA-Z0-9]+:\$6\$[a-zA-Z0-9./]+\$[a-zA-Z0-9./]+:\d*:\d*:\d*::.*$
+languages: [python], [php]
+message: ”Linux user detected”
+severity: ERROR
