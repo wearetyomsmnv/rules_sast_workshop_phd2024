@@ -8,4 +8,4 @@ jobs:
     container:
       image: returntocorp/semgrep
     steps:
-      - run: semgrep publish --visibility=org_private <path_to_your_folder>
+      - run: semgrep publish --visibility=org_private 
