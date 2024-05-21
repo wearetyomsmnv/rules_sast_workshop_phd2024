@@ -1,11 +1,21 @@
-name: SemgrepPublish
+name: semgrep-publish
+
+on:
+  push:
+    branches:
+    - main
+    - master
+    - develop
+
 jobs:
-  semgrep:
-    name: Publish
-    runs-on: ubuntu-20.04
-    env:
-      SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+  publish:
+    name: publish-private-semgrep-rules
+    runs-on: ubuntu-latest
     container:
-      image: returntocorp/semgrep
+      image: semgrep/semgrep
     steps:
-      - run: semgrep publish --visibility=org_private .
+    - uses: actions/checkout@v4
+    - name: publish private semgrep rules
+      run: semgrep publish --visibility=org_private ./private_rule_dir
+      env:
+        SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
