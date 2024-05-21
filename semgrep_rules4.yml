@@ -3,8 +3,8 @@ rules:
     patterns:
       - pattern: eval(...);
       - pattern-not: eval('...');
-           - pattern-not: eval(f"")
-   message: eval detected
-   languages:
+      - pattern-not: eval(f"")
+    message: eval detected
+    languages:
       - php
     severity: ERROR
