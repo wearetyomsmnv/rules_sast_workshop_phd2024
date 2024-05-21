@@ -1,13 +1,13 @@
 rules:
-  - id: generic-entropy-assignment
-    patterns:
-      - pattern-either:
-          - pattern: $A = "$B"
-          - pattern: $A = $B
-      - metavariable-analysis:
-          analyzer: entropy
-          metavariable: $B
-    message: Found a high-entropy assignment to $A
-    languages:
-      - generic
-    severity: ERROR
+  - id: generic-entropy-assignment
+    patterns:
+      - pattern-either:
+        - pattern:  $A = "$B"
+        - pattern:  $A = $B
+      - metavariable-analysis:
+          analyzer: entropy
+          metavariable: $B
+    message: Found a high-entropy assignment to $A
+    languages:
+      - generic
+    severity: ERROR
