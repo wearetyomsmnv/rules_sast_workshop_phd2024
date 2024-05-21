@@ -1,0 +1,17 @@
+rules:
+- id: untitled_rule
+pattern-either: -pattern-regex: (TODO|XXX|FIXME|BUG|HACK|LATER|CVE-)
+-pattern-regex: (?i)(unsafe|insecure|dangerous|warning|overflow)
+-pattern-regex: (?i)(password|private|token|secret|passwd|credential|passphrase)
+-pattern-regex: (?i)(key|JWT|JKS|JWK|JKU)
+-pattern-regex: (?i)(privilege|permission|capabilit|role|rbac|polic|authorization|claim)
+-pattern-regex: (?i)(alloc|free|eval|run|process|system|popen|exec|spawn|merge|clone)
+-pattern-regex: (?i)(AES|RSA|DSA|DES|CBC|ECB|HMAC|GCM|MD5|sha1|sha-1|3des|des3|TripleDES|crypt|CCCrypt)
+-pattern-regex: (?i)(xml|xerces|sax|etree|xpath|documentbuilder)
+-pattern-regex: (?i)(encode|decode|convert|interpret|compress|fragment|reassemble)
+-pattern-regex: (?i)(mutex|lock|toctou|parallelism|semaphore|retain|release|garbage|mutual)
+-pattern-regex: (Math.random(|java.util.Random)
+-pattern-regex: (SAXParserFactory|DOM4J|XMLInputFactory|TransformerFactory|javax.xml.validation.Validator|SchemaFactory)
+languages: [generic]
+message: ”FYI"
+severity: INFO

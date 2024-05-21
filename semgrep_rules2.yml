@@ -1,5 +1,5 @@
 rules:
-id: eval-use
+- id: eval-use
 pattern: eval(…);
 languages: [php]
 message: ”Eval detected”

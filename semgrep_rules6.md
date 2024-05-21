@@ -1,7 +1,0 @@
-rules:
-id: untitled_rule
-patterns: 
-		- pattern-regex: ‘\beval[\s]*\(’
-languages: [python], [php]
-message: ”Eval detected"
-severity: WARNING

@@ -1,7 +1,0 @@
-rules:
-id: eval-detection
-patterns: 
-	- pattern-regex: '\beval[\s]*’
-languages: [generic]
-message: «Eval detected»
-severity: ERROR
